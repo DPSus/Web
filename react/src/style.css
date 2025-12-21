@@ -1,0 +1,53 @@
+/* Copied and adapted from lab1 project style.css */
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --accent:#0ea5a4;
+  --muted:#6b7280;
+  --surface:#ffffff;
+  --surface-alt:#f8fafc;
+  --card-bg:#ffffff;
+  --footer-bg:#f3f4f6;
+  --border:#e6eef8;
+  --card-border:#eef2ff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:var(--text);background:var(--bg);line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.logo{margin:0;font-size:1.25rem}
+.nav{list-style:none;padding:0;margin:0;display:flex;gap:0.75rem}
+.nav a{text-decoration:none;color:var(--muted)}
+.featured{padding:1rem 0}
+.featured-article{background:linear-gradient(180deg,var(--surface),var(--surface-alt));padding:1rem;border-radius:8px;border:1px solid var(--border)}
+.meta{color:var(--muted);font-size:0.9rem;margin:0.25rem 0}
+.lead{color:var(--muted);max-width:70%;margin:0.5rem auto}
+.input{padding:0.5rem 0.75rem;border:1px solid #e5e7eb;border-radius:6px}
+.btn{background:var(--accent);color:white;border:none;padding:0.5rem 0.75rem;border-radius:6px;cursor:pointer}
+.cards{display:flex;gap:0.75rem;padding:0;margin:0;list-style:none}
+.card{background:var(--card-bg);padding:0.75rem;border-radius:8px;border:1px solid var(--card-border);flex:1}
+.article .title{margin:0 0 0.5rem 0}
+.summary{color:var(--muted);margin:0 0 0.5rem 0}
+.controls{display:flex;gap:0.5rem;justify-content:flex-end}
+.form-inline{margin-top:1rem;display:flex;gap:0.5rem}
+.search{width:180px}
+.site-footer{background:var(--footer-bg);padding:1rem 0;margin-top:2rem}
+
+/* read state */
+.read{opacity:0.6;text-decoration:line-through}
+
+/* Dark theme */
+.dark{--bg:#0b1220;--text:#e6eef8;--accent:#11999a;--muted:#9aa6bd; --surface:#0f1724; --surface-alt:#07101a; --card-bg:#0f1724; --footer-bg:#07101a; --border:#0f2331; --card-border:#091621}
+
+@media (max-width:900px){
+  .cards{flex-direction:column}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .search{width:100%}
+}
+
+@media (max-width:700px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .cards{flex-direction:column}
+  .lead{max-width:100%}
+}
+
