@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Новости — WebLab</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">WebLab Новости</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#categories">Рубрики</a></li>
+          <li><a href="#about">О проекте</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <input id="searchInput" class="input search" type="search" placeholder="Поиск статей...">
+        <button id="themeToggle" class="btn">Тёмная тема</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="featured" class="featured">
+      <article class="article featured-article">
+        <h2 class="title">Главная новость: Мини-новостник для лабораторной</h2>
+        <p class="meta">Автор: Преподаватель · 21 дек. 2025</p>
+        <p class="summary">Небольшой учебный проект, демонстрирующий семантическую разметку, CSS и JavaScript-интерактивность.</p>
+      </article>
+    </section>
+
+    <section id="news" class="news-list">
+      <h3>Последние статьи</h3>
+      <ul id="articles" class="cards">
+        <li class="article card">
+          <h4 class="title">JavaScript: основы и примеры</h4>
+          <p class="summary">Краткий обзор базовых концепций языка и примеры кода для начинающих.</p>
+          <div class="controls"><button class="btn read-btn">Прочитано</button></div>
+        </li>
+        <li class="article card">
+          <h4 class="title">CSS: современные приёмы</h4>
+          <p class="summary">Советы по вёрстке: Flexbox, Grid и адаптивность.</p>
+          <div class="controls"><button class="btn read-btn">Прочитано</button></div>
+        </li>
+      </ul>
+
+      <form id="addArticleForm" class="form-inline">
+        <input id="articleTitle" class="input" placeholder="Заголовок статьи" required>
+        <input id="articleSummary" class="input" placeholder="Короткое описание" required>
+        <button class="btn" type="submit">Добавить статью</button>
+      </form>
+    </section>
+
+    <section id="about" class="about">
+      <h3>О проекте</h3>
+      <p>Учебный мини-проект, переделанный под новостной сайт. Продемонстрированы: семантика HTML, стилизация и простая интерактивность на JS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 WebLab — учебный проект</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
